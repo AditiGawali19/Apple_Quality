@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 from flask import jsonify
 from utils import get_apple_quality
+import config
 # Initialize Flask Application
 app = Flask(__name__)
 prediction=''
@@ -42,5 +43,4 @@ def apple_quality_test_api():
 
 
 if __name__ == "__main__":
-
-    app.run(host='0.0.0.0',port=5002,debug=False)
+    app.run(host='0.0.0.0',port=config.PORT_NUMBER,debug=False)
